@@ -48,3 +48,10 @@
 ```bash
 cd backend
 npm install
+
+### 2. frontend Setup
+```bash
+npm install
+ng serve
+
+
