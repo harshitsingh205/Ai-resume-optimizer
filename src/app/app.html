@@ -1,0 +1,41 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100 flex flex-col">
+  <!-- Header -->
+  <header class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div class="flex-1">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-400 dark:to-blue-500 bg-clip-text text-transparent">Resume Optimizer</h1>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">Built by <a href="https://github.com/harshitsingh205" target="_blank" rel="noopener" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Harshit Singh</a></p>
+      </div>
+      <button type="button" (click)="toggleDarkMode()"
+        class="p-2 rounded-full border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+        [attr.aria-label]="darkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+        @if (!darkMode()) {
+        🌙
+        } @else {
+        ☀️
+        }
+      </button>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="flex-1">
+    <router-outlet />
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+      <div class="text-sm text-gray-600 dark:text-gray-400" aria-live="polite">
+        @if (isVisitorCountLoading()) {
+          <span class="inline-block animate-pulse">Loading visitors...</span>
+        } @else if (visitorCountError()) {
+          <span class="text-red-500">Error: {{ visitorCountError() }}</span>
+        } @else {
+          <span>👥 <strong>{{ visitorCount() }}</strong> visitors</span>
+        }
+      </div>
+      <p class="text-xs text-gray-500 dark:text-gray-500 mt-3">&copy; 2026 Resume Optimizer by Harshit Singh</p>
+    </div>
+  </footer>
+</div>
