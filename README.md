@@ -1,6 +1,9 @@
 <div align="center">
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=1a1b27&height=120&section=header&text=Resume%20Optimizer&fontSize=40&fontColor=73daca&animation=fadeIn"/>
+<p align="center">
+  <img src="dashboard.png" alt="App Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?font=Inter&size=28&duration=3500&pause=1000&color=73daca&center=true&vCenter=true&width=450&height=50&lines=AI-Powered+Analysis;Angular+20+%2B+Gemini+API;Resume+Score+Optimization" alt="Typing SVG" />
@@ -36,6 +39,13 @@
 | **File Handling** | Multer, PDF-Parse, Mammoth |
 
 ---
+## Frontend setup
+
+# Install Angular dependencies
+npm install
+
+# Launch the development server
+ng serve --open
 
 ## ⚙️ Getting Started
 
@@ -44,14 +54,12 @@
 * Angular CLI (`npm install -g @angular/cli`)
 * [Gemini API Key](https://aistudio.google.com/app/apikey)
 
+  
+
 ### 1. Backend Setup
 ```bash
 cd backend
 npm install
 
-### 2. frontend Setup
-```bash
-npm install
-ng serve
 
 
